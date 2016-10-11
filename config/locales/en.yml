@@ -21,3 +21,27 @@
 
 en:
   hello: "Hello world"
+  application:
+    title: "E-Learning"
+  header:
+    home: "Home"
+    contact: "Contact"
+    login: "Login"
+  index:
+    signup: "Sign up now!"
+    slogan: "challenge your intelligence"
+    description: "Learn from wiki pages and problems written by a community of mathematicians, scientists, and engineers."
+    category: "Logic"
+  form:
+    name: "Name"
+    email: "Email Address"
+    phonenumber: "Phone Number"
+    message: "Message"
+  button:
+    send: "Send"
+  footer:
+    designby: "@ 2016 by STG. All rights reserved."
+    twitter: "twitter"
+    facebook: "facebook"
+    googleplus: "googleplus"
+    pinterest: "pinterest"
