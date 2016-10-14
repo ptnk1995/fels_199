@@ -1,10 +1,7 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
 #header {
   margin: 0 auto;
   padding: 0px 0 50px;
   text-align: center;
-  width: 960px;
 }
 #header .logo {
   display: block;
@@ -22,9 +19,8 @@
   padding: 0 19px;
 }
 #header ul li a {
-  color: #252525;
   display: inline-block;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: 'Arial Black', Gadget, sans-serif;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
@@ -84,7 +80,7 @@
 .btn #send {
   background: none repeat scroll 0% 0% #252525;
   color: #FFF;
-  font-family: "Arial Black",Gadget,sans-serif;
+  font-family: 'Arial Black',Gadget,sans-serif;
   font-size: 15px;
   font-weight: normal;
   display: inline-block;
@@ -212,7 +208,7 @@
 .container form #send {
   background: #252525;
   color: #fff;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: 'Arial Black', Gadget, sans-serif;
   font-size: 15px;
   font-weight: normal;
   display: inline-block;
@@ -290,4 +286,7 @@
 }
 #footer div ul li #pinterest:hover {
   background-position: -44px -132px;
+}
+.white{
+  color: white !important;
 }

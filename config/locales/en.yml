@@ -45,3 +45,38 @@ en:
     facebook: "facebook"
     googleplus: "googleplus"
     pinterest: "pinterest"
+  footer_admin:
+    introduce: "&copy; Copyright 2016 Dreamz | Worked by"
+    design_by: "Nguyễn Phước Tiên - ĐHSP Đà Nẵng"
+  header_admin:
+    phone: "Phone: (123) 456-7890"
+    email: "Email: trytobetter@gmail.com"
+  menu_admin:
+    admin: "Admin"
+    user: "Manager user"
+    introduce: "Manage by Admin"
+    category: "Category"
+    lesson: "lesson"
+    question: "Question"
+    question_suggest: "question_suggest"
+    mark: "Mark"
+    exam: "Exam"
+    report: "Report"
+    account:
+      description: "account"
+      profile: "profile"
+      settings: "settings"
+      logout: "logout"
+  admin:
+    title: "Edu Admin"
+    user_register: "User Register"
+    user_waiting: "Waiting Question"
+  function:
+    edit: "Edit"
+    update: "Update"
+    delete: "Delete"
+    detail: "Detail"
+  activity: "Activity"
+  website: "Website"
+  function_manager: "Function Manager"
+  count: "14"
