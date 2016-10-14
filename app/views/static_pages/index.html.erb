@@ -1,28 +1,28 @@
 <div id="featured">
-  <%= image_tag("home-bg.jpg", alt: "rss feed") %>
+  <%= image_tag "home-bg.jpg", alt: t("alt") %>
   <div>
     <h2><%= t "index.slogan" %></h2>
     <span><%= t "index.description" %></span>
     <br />
-    <%= link_to t("index.signup"), "#", class: "btn btn-lg" %>
+    <%= link_to t("index.signup"), signup_path, class: "btn send" %>
   </div>
 </div>
 <ul>
   <li>
     <a href="gallery.html">
-      <%= image_tag("Logic.png", alt: "rss feed") %>
+      <%= image_tag "Logic.png", alt: t("alt") %>
       <span><%= t "index.category" %></span>
     </a>
   </li>
   <li>
     <a href="gallery.html">
-      <%= image_tag("Computer.png", alt: "rss feed") %>
+      <%= image_tag "Computer.png", alt: t("alt") %>
       <span><%= t "index.category" %></span>
     </a>
   </li>
   <li>
     <a href="gallery.html">
-      <%= image_tag("Algebra.png", alt: "rss feed") %>
+      <%= image_tag "Algebra.png", alt: t("alt") %>
       <span><%= t "index.category" %></span>
     </a>
   </li>
