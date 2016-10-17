@@ -8,12 +8,7 @@
     border: none;
   }
 }
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
-}
+
 #header {
   margin: 0 auto;
   padding: 0px 0 50px;
@@ -423,4 +418,7 @@
 }
 #footer div ul li #pinterest:hover {
   background-position: -44px -132px;
+}
+.white{
+  color: white !important;
 }
