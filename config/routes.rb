@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :users, expect: [:destroy]
   namespace :admin do
     root "home#index", as: "root"
+    resources :categories
   end
 end
