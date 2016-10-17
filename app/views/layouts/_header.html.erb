@@ -1,8 +1,13 @@
 <div id="header">
- <%= image_tag("logo.png", alt: "rss feed",class:"logo") %>
- <ul id="navigation">
-  <li><%= link_to t("header.home"),   root_path %></li>
-  <li><%= link_to t("header.contact"),   contact_path %></li>
-  <li><%= link_to t("header.login"), "#" %></li>
-</ul>
+  <%= image_tag "logo.png", alt: t("alt"), class:"logo" %>
+  <ul id="navigation">
+    <li><%= link_to t("header.home"), root_path %></li>
+    <li><%= link_to t("header.lesson"), root_path %></li>
+    <li><%= link_to t("header.contributes_question"), root_path %></li>
+    <li><%= link_to t("header.activities"), contact_path %></li>
+    <li><%= link_to t("header.users"), contact_path %></li>
+    <li><%= link_to t("header.contact"), contact_path %></li>
+    <li><%= link_to t("header.login"), "#" %></li>
+    <li><%= link_to t("header.profile"), "#" %></li>
+  </ul>
 </div>

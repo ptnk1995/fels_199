@@ -21,24 +21,38 @@
 
 en:
   hello: "Hello world"
+  alt: "rss feed"
   application:
     title: "E-Learning"
   header:
     home: "Home"
     contact: "Contact"
     login: "Login"
+    contributes_question: "Contributes question"
+    activities: "Activities"
+    lesson: "Lesson"
+    profile: "Profile"
+    users: "Users"
   index:
     signup: "Sign up now!"
     slogan: "challenge your intelligence"
-    description: "Learn from wiki pages and problems written by a community of mathematicians, scientists, and engineers."
+    description: "Learn from wiki pages and problems written by a community of
+      mathematicians, scientists, and engineers."
     category: "Logic"
+  new_user:
+    signup: "Sign Up"
+    success: "Success!"
+    danger: "Invalid user!"
   form:
     name: "Name"
     email: "Email Address"
     phonenumber: "Phone Number"
     message: "Message"
+    password: "Password"
+    confirmation: "Confirmation"
   button:
     send: "Send"
+    create: "Create my account"
   footer:
     designby: "@ 2016 by STG. All rights reserved."
     twitter: "twitter"
