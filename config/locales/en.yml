@@ -33,16 +33,26 @@ en:
     lesson: "Lesson"
     profile: "Profile"
     users: "Users"
+    account: "account"
+    logout: "logout"
+    setting: "setting"
   index:
     signup: "Sign up now!"
     slogan: "challenge your intelligence"
     description: "Learn from wiki pages and problems written by a community of
       mathematicians, scientists, and engineers."
     category: "Logic"
+    invalid_value: "Invalid email/password combination"
   new_user:
     signup: "Sign Up"
     success: "Success!"
     danger: "Invalid user!"
+    warning: "Please log in!"
+    update: "Profile updated"
+  user_infor:
+    follow: "Follow"
+    follower: "Follower"
+    followed: "Followed"
   form:
     name: "Name"
     email: "Email Address"
@@ -53,6 +63,7 @@ en:
   button:
     send: "Send"
     create: "Create my account"
+    save: "Save change"
   footer:
     designby: "@ 2016 by STG. All rights reserved."
     twitter: "twitter"
