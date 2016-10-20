@@ -13,4 +13,10 @@ class ApplicationController < ActionController::Base
   def correct_user
     redirect_to root_url unless current_user.is_user? @user
   end
+
+  def verify_admin
+    unless logged_in? && current_user.admin?
+      redirect_to root_path
+    end
+  end
 end

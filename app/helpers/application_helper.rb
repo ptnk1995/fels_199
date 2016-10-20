@@ -21,5 +21,12 @@ module ApplicationHelper
     "if html_options[:onclick]}#{function}; return false;"
     href = html_options[:href] || "#"
     content_tag(:a, name, html_options.merge(href: href, onclick: onclick))
+
+  def display_image user, class_image = ""
+    if user.avatar?
+      image_tag user.avatar, class: class_image
+    else
+      image_tag "logo.png", class: class_image
+    end
   end
 end

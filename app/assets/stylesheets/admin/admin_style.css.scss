@@ -432,7 +432,20 @@ animation: fadeInUp .4s ease-in;
 #content-container {
   height: 650px;
 }
-
+.text-success {
+  color: white !important;
+}
+.btnUser {
+  margin-left: 240px;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+.title_update_admin {
+  font-family: initial;
+  text-align: center;
+}
 #formcategory form {
   box-sizing: border-box;
   width: 260px;
