@@ -43,6 +43,7 @@ en:
       mathematicians, scientists, and engineers."
     category: "Logic"
     invalid_value: "Invalid email/password combination"
+    follow: "Follow"
   new_user:
     signup: "Sign Up"
     success: "Success!"
@@ -121,3 +122,6 @@ en:
   website: "Website"
   function_manager: "Function Manager"
   count: "14"
+  formats:
+    long: "%B %e, %Y, %I:%M %p"
+    short: "%b %d, %Y"

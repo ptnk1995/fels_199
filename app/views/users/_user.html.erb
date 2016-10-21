@@ -5,11 +5,11 @@
         <%= image_tag "bguser_infor.jpg", alt: t("alt") %>
       </div>
       <div class="avatar">
-        <%= gravatar_for current_user %>
+        <%= gravatar_for @user %>
       </div>
       <div class="info">
         <div class="title">
-          <%= link_to current_user.name, "#" %>
+          <%= link_to @user.name, @user %>
         </div>
         <div class="desc">
           <%= t "user_infor.followed" %>

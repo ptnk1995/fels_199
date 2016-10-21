@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:show, :update]
-  before_action :load_user, only: [:show, :update, :correct_user]
+  before_action :logged_in_user, except: [:new, :create]
+  before_action :load_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
 
   def index
+    @users = User.recent.paginate page: params[:page], per_page:
+      Settings.per_page_users
   end
 
   def new
@@ -29,20 +31,17 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes user_params
-      flash[:success] = t "update"
+      flash[:success] = t "new_user.update"
       redirect_to root_url
     else
-      render :show
+      render :edit
     end
-  end
-
-  def destroy
   end
 
   private
   def user_params
     params.require(:user).permit :name, :email, :password,
-      :password_confirmation
+      :password_confirmation, :avatar
   end
 
   def load_user
@@ -51,5 +50,9 @@ class UsersController < ApplicationController
       flash[:danger] = t "new_user.danger"
       redirect_to root_url
     end
+  end
+
+  def correct_user
+    redirect_to root_url unless current_user.is_user? @user
   end
 end
