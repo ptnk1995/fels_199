@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "home#index", as: "root"
     resources :categories
+    resources :questions
+    resources :answers
   end
 end
