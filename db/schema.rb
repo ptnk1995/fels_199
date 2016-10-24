@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014073850) do
+ActiveRecord::Schema.define(version: 20161023072053) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "action_type"
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20161014073850) do
 
   create_table "questions", force: :cascade do |t|
     t.text     "content"
-    t.integer  "type"
+    t.integer  "pattern"
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
