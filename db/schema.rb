@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20161023173731) do
   end
 
   create_table "exams", force: :cascade do |t|
-    t.float    "test_time"
+    t.integer  "status"
     t.integer  "mark"
     t.integer  "user_id"
     t.integer  "category_id"

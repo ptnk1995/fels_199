@@ -22,6 +22,7 @@ module ApplicationHelper
     href = html_options[:href] || "#"
     content_tag(:a, name, html_options.merge(href: href, onclick: onclick))
   end
+
   def display_image user, class_image = ""
     if user.avatar?
       image_tag user.avatar, class: class_image
@@ -30,11 +31,16 @@ module ApplicationHelper
     end
   end
 
-  def display_image user, class_image = ""
-    if user.avatar?
-      image_tag user.avatar, class: class_image
+  def show_status_exam exam
+    case
+    when exam.checked?
+      t "status.danger"
+    when exam.uncheck?
+      t "status.info"
+    when exam.testing?
+      t "status.warning"
     else
-      image_tag "logo.png", class: class_image
+      t "status.success"
     end
   end
 end

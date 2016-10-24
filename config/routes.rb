@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   delete "logout", to: "sessions#destroy"
   resources :users, expect: :destroy
   resources :suggest_questions
+  resources :exams
   namespace :admin do
     root "home#index", as: "root"
     resources :categories

@@ -4,9 +4,8 @@ class Question < ApplicationRecord
   belongs_to :category
 
   validates :category, presence: true
-  validates :content, presence: true, length: {minimum: 10}
-
   accepts_nested_attributes_for :answers, allow_destroy: true
 
   scope :recent, ->{order created_at: :desc}
+  scope :random, ->{order("RANDOM()").limit Settings.exams.number_question}
 end

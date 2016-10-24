@@ -1,7 +1,7 @@
 class CreateExams < ActiveRecord::Migration[5.0]
   def change
     create_table :exams do |t|
-      t.float :test_time
+      t.integer :status
       t.integer :mark
       t.references :user, foreign_key: true
       t.references :category, foreign_key: true
