@@ -4,7 +4,7 @@
     <li><%= link_to t("header.home"), root_path %></li>
     <% if logged_in? %>
       <li><%= link_to t("header.lesson"), "#" %></li>
-      <li><%= link_to t("header.contributes_question"), "#" %></li>
+      <li><%= link_to t("header.contributes_question"), suggest_questions_path %></li>
       <li><%= link_to t("header.activities"), "#" %></li>
       <li><%= link_to t("header.users"), users_path %></li>
       <li class="dropdown">

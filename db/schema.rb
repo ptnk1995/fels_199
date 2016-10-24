@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161023072053) do
+ActiveRecord::Schema.define(version: 20161023173731) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "action_type"
@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(version: 20161023072053) do
   create_table "suggest_questions", force: :cascade do |t|
     t.text     "content"
     t.boolean  "status"
-    t.integer  "type"
+    t.integer  "pattern"
     t.integer  "user_id"
     t.integer  "category_id"
     t.datetime "created_at",  null: false
