@@ -6,11 +6,12 @@ Rails.application.routes.draw do
   get "login", to: "sessions#new"
   post "login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
-  resources :users, expect: [:destroy]
+  resources :users, expect: :destroy
   namespace :admin do
     root "home#index", as: "root"
     resources :categories
     resources :questions
     resources :answers
+    resources :users
   end
 end

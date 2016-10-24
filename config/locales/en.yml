@@ -147,3 +147,33 @@ en:
   formats:
     long: "%B %e, %Y, %I:%M %p"
     short: "%b %d, %Y"
+  user_admin:
+    avatar: "avatar"
+    create: "Create User"
+    edit: "Edit User"
+    update: "Update User"
+    delete: "Are you sure?"
+    user_name: "User Name"
+    user_email: "User Email"
+    user_avatar: "Avatar"
+    role: "Role"
+    date: "Date of Join:"
+    action: "Action"
+    placeholder:
+      name: "Enter name"
+      email: "Enter email"
+      password: "Password"
+      confirmation: "Confirmation password"
+    flash:
+      create_success: "Create Success"
+      create_danger: "Create Not Success"
+      update_success: "Update Success"
+      update_danger: "Update Not Success"
+      manage_user: "Manage User"
+      destroy_success: "Destroy Success"
+      destroy_danger: "Destroy Not Success"
+      require: "You must login admin"
+      find_danger: "Can not find this user!"
+  status:
+    success: "success"
+    warning: "warning"
