@@ -11,6 +11,9 @@ class Admin::UsersController < AdminController
     @user = User.new
   end
 
+  def show
+  end
+
   def create
     @user = User.new user_params
     if @user.save
@@ -18,6 +21,15 @@ class Admin::UsersController < AdminController
       redirect_to admin_users_path
     else
       render :new
+    end
+  end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t "user_admin.flash.update_success"
+      redirect_to admin_users_path
+    else
+      render :edit
     end
   end
 
@@ -32,8 +44,7 @@ class Admin::UsersController < AdminController
 
   private
   def user_params
-    params.require(:user).permit :name, :email, :password,
-      :password_confirmation, :role
+    params.require(:user).permit :name, :email, :password, :role
   end
 
   def load_users
