@@ -29,4 +29,12 @@ module ApplicationHelper
       image_tag "logo.png", class: class_image
     end
   end
+
+  def display_image user, class_image = ""
+    if user.avatar?
+      image_tag user.avatar, class: class_image
+    else
+      image_tag "logo.png", class: class_image
+    end
+  end
 end
