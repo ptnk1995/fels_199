@@ -2,6 +2,7 @@ class Admin::QuestionsController < AdminController
   before_action :logged_in_user
   before_action :verify_admin_access?
   before_action :load_question, except: [:new, :create, :index]
+  before_action :load_categories, only: [:new, :create, :edit]
 
   def index
     @questions = Question.recent.paginate page: params[:page],
@@ -10,12 +11,10 @@ class Admin::QuestionsController < AdminController
 
   def new
     @question = Question.new
-    @category = Category.all
     @question.answers.build
   end
 
   def create
-    @category = Category.all
     @question = Question.new question_params
     if @question.save
       flash[:success] = t "question_admin.create_success"
@@ -26,7 +25,6 @@ class Admin::QuestionsController < AdminController
   end
 
   def edit
-    @category = Category.all
   end
 
   def update
@@ -40,11 +38,10 @@ class Admin::QuestionsController < AdminController
 
   def destroy
     if @question.destroy
-      flash[:success] = t "question_admin.destroy_success"
-      redirect_to admin_questions_path
-    else
-      flash[:danger] = t "question_admin.destroy_danger"
-      redirect_to admin_root_path
+      respond_to do |format|
+        format.html {redirect_to questions_url}
+        format.js
+      end
     end
   end
 
@@ -60,6 +57,10 @@ class Admin::QuestionsController < AdminController
         flash[:success] = t "question_admin.not_found"
         redirect_to admin_root_path
       end
+    end
+
+    def load_categories
+      @category = Category.all
     end
 
 end

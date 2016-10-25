@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <% @suggests.each do |suggest| %>
-      <tr>
+      <tr id="suggest_<%= suggest.id%>">
         <td><%= suggest.content %></td>
         <td class = "last-column">
           <span class="pull">
@@ -19,7 +19,7 @@
             <% end %>
             <%= link_to suggest_question_path(suggest),
               method: :delete, data: {confirm: t("function.confirm_delete")},
-              class: "btn btn-sm btn-danger", id: "suggest_delete",
+              class: "btn btn-sm btn-danger", id: "suggest-delete",
               remote: true do %>
               <i class="glyphicon glyphicon-remove"></i>
             <% end %>
