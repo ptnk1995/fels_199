@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post "login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
   resources :users, expect: :destroy
+  resources :suggest_questions
   namespace :admin do
     root "home#index", as: "root"
     resources :categories

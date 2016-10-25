@@ -15,6 +15,7 @@ class Admin::QuestionsController < AdminController
   end
 
   def create
+    @category = Category.all
     @question = Question.new question_params
     if @question.save
       flash[:success] = t "question_admin.create_success"
