@@ -1,5 +1,5 @@
 class QuestionExam < ApplicationRecord
-  has_many :answer_chooses, dependent: true
+  has_many :answer_chooses, dependent: :destroy
 
   belongs_to :question
   belongs_to :exam

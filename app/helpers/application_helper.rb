@@ -30,11 +30,16 @@ module ApplicationHelper
     end
   end
 
-  def display_image user, class_image = ""
-    if user.avatar?
-      image_tag user.avatar, class: class_image
+  def show_status_exam exam
+    case
+    when exam.checked?
+      t "status.success"
+    when exam.uncheck?
+      t "status.danger"
+    when exam.testing?
+      t "status.warning"
     else
-      image_tag "logo.png", class: class_image
+      t "status.info"
     end
   end
 end
