@@ -37,11 +37,13 @@ class SuggestQuestionsController < ApplicationController
 
   def destroy
     if @suggest.destroy
-      flash[:success] = t "suggest_user.destroy_success"
-      redirect_to suggest_questions_path
+      respond_to do |format|
+        format.html {redirect_to suggest_questions_url}
+        format.js
+      end
     else
       flash[:danger] = t "suggest_user.destroy_danger"
-      redirect_to root_path
+      redirect_to suggest_questions_path
     end
   end
 

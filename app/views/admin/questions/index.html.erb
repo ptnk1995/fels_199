@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <% @questions.each do |question| %>
-      <tr>
+      <tr id="question_<%= question.id%>">
         <td><%= question.content %></td>
         <td class = "last-column">
           <span class="pull">
@@ -19,7 +19,8 @@
             <% end %>
             <%= link_to admin_question_path(question),
               method: :delete, data: {confirm: t("function.confirm_delete")},
-              class: "btn btn-sm btn-danger" do %>
+              class: "btn btn-sm btn-danger", id: "question-delete",
+              remote: true do %>
               <i class="glyphicon glyphicon-remove"></i>
             <% end %>
           </span>
